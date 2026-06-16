@@ -2,8 +2,8 @@ pipeline{
     agent any
     stages{
         stage('checkout'){
-            
-            steps { 
+
+            steps {
             sh 'mvn --version'
             sh 'java --version'
             git url: 'http://github.com/anishudupan-rns/devops-pgrm7.git', branch:'main' }
@@ -17,7 +17,7 @@ pipeline{
     }
     post{
         always{
-            junit 'target/surefile-reports/*.xml'
+            junit 'target/surefire-reports/*.xml'
         }
     }
 }

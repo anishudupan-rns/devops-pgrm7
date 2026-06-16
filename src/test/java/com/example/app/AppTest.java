@@ -3,9 +3,10 @@ package com.example.app;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AppTest{ 
+public class AppTest{
     @Test
     public void testAdd(){
         Assert.assertEquals(30,App.add(10,20));
+        System.out.println("Test Successful");
     }
 }
